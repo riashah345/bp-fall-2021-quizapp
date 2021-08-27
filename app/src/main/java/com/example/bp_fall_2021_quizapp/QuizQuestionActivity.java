@@ -22,6 +22,8 @@ public class QuizQuestionActivity extends AppCompatActivity {
 
         // create arraylist of questions
 
+        // get username intent from main activity screen
+
         // initialize views using findViewByID
 
         // use helper method to add question content to arraylist

@@ -2,3 +2,7 @@
 BP Fall 2021 Project Skeleton
 
 Hi Fall 2021 Blueprint SWE fellows! Clone this project skeleton to get started making your own Android Quiz Application :)
+<<<<<<< Updated upstream
+=======
+//ggmk
+>>>>>>> Stashed changes

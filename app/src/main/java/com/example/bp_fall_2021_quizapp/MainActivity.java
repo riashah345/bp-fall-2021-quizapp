@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatEditText;
 
+//hello2
+
 public class MainActivity extends AppCompatActivity {
 
     // Put class variables up here

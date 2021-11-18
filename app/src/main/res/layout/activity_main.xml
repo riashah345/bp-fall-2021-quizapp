@@ -11,34 +11,45 @@
     <!--            android:layout_width="match_parent"-->
     <!--            android:layout_height="wrap_content"-->
     <!--            android:layout_marginTop="20dp" />-->
-    <ScrollView
-            android:layout_width="132dp"
-            android:layout_height="21dp" tools:layout_editor_absoluteY="109dp"
-            tools:layout_editor_absoluteX="130dp">
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="The Cutest Food Quiz"
-                    android:layout_width="wrap_content"
-                    android:layout_height="21dp" android:id="@+id/textView4"
-            />
-        </LinearLayout>
-    </ScrollView>
+    <TextView
+            android:text="The Cutest Food Quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="100dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintHorizontal_bias="1.0" android:paddingLeft="30"/>
     <androidx.cardview.widget.CardView
-            android:layout_width="356dp"
-            android:layout_height="320dp" tools:layout_editor_absoluteY="171dp"
-            tools:layout_editor_absoluteX="25dp">
-        <TextView
-                android:text="TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="64dp" android:id="@+id/textView8" tools:layout_editor_absoluteY="440dp"
-                tools:layout_editor_absoluteX="-25dp"/>
+            android:layout_width="292dp"
+            android:layout_height="224dp"
+            android:layout_marginTop="35dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginBottom="5dp" app:layout_constraintBottom_toTopOf="@+id/button"
+            android:layout_marginEnd="38dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="38dp">
+        <Button
+                android:text="Start"
+                android:layout_width="116dp"
+                android:layout_height="41dp" android:id="@+id/button"
+                android:layout_margin="150"/>
         <TextView
                 android:text="Welcome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView5"/>
+                android:layout_height="224dp" android:id="@+id/textView1"
+                android:paddingLeft="115"/>
+        <TextView
+                android:text="Please enter your name"
+                android:layout_width="238dp"
+                android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_margin="30"
+                android:layout_marginStart="0" android:layout_marginLeft="0" android:layout_marginTop="0"
+                android:layout_marginEnd="0" android:layout_marginRight="0" android:layout_marginBottom="0"
+                android:paddingLeft="40"/>
+        <EditText
+                android:id="@+id/plain_text_input"
+                android:layout_height="wrap_content"
+                android:layout_width="132dp"
+                android:inputType="text" android:layout_margin="80"
+        />
     </androidx.cardview.widget.CardView>
 
 

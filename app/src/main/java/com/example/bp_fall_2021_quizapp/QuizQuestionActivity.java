@@ -3,6 +3,7 @@ package com.example.bp_fall_2021_quizapp;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,10 @@ import java.util.ArrayList;
 public class QuizQuestionActivity extends AppCompatActivity {
 
     // UI components here
+    private TextView tvQuestion, tvProgress;
+    private ProgressBar progress;
+    private RadioGroup radioGroup;
+    private RadioButton rb1, rb2, rb3, rb4;
 
     // other variables here
 

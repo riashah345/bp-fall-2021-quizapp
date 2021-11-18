@@ -2,6 +2,7 @@ package com.example.bp_fall_2021_quizapp;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // obtain user's name using findViewById
-        nameInput = findViewById(R.id.name);
+        nameInput = findViewById(R.id.name_Input);
 
     }
 

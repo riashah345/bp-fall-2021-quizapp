@@ -31,12 +31,12 @@
                 android:text="Start"
                 android:layout_width="116dp"
                 android:layout_height="41dp" android:id="@+id/button"
-                android:layout_margin="150"/>
+                android:includeFontPadding="false" android:layout_marginLeft="85" android:layout_marginTop="150"/>
         <TextView
                 android:text="Welcome"
                 android:layout_width="match_parent"
                 android:layout_height="224dp" android:id="@+id/textView1"
-                android:paddingLeft="115"/>
+                android:paddingLeft="110"/>
         <TextView
                 android:text="Please enter your name"
                 android:layout_width="238dp"

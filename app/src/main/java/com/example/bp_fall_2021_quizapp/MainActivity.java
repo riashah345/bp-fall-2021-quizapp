@@ -2,18 +2,22 @@ package com.example.bp_fall_2021_quizapp;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatEditText;
 
-
-
-
 public class MainActivity extends AppCompatActivity {
 
-    private AppCompatEditText nameInput;
+    private TextView titleTextView;
+    private TextView welcomeTextView;
+    private TextView enterNameTextView;
+    private EditText nameInput;
+    private Button startButton;
+
     // Put class variables up here
     // Best practice is to make them private (can only be accessed within the class, or using getters/setters)
     // Each UI component that you want to reference needs a variable
@@ -28,11 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         // obtain user's name using findViewById
-        nameInput = findViewById(R.id.name_Input);
-
+        nameInput = findViewById(R.id.nameInput);
     }
 
     /**
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         String inputtedName = nameInput.getText().toString();
 
         // If the name field is empty, prompt user to enter name
-        if (nameInput.getText().toString().isEmpty()) {
+        if (inputtedName.isEmpty()) {
             Toast.makeText(getBaseContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
         }
 
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
 }
 
 

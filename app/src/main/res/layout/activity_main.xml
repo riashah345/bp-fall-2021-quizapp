@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="#E9CEED">
     <!--    <Button-->
     <!--            android:id = "@+id/btn_start"-->
     <!--            android:layout_width="match_parent"-->
@@ -19,7 +19,8 @@
             android:layout_marginTop="200dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="100dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="100dp"
-            app:layout_constraintHorizontal_bias="1.0" android:paddingLeft="30"/>
+            app:layout_constraintHorizontal_bias="1.0" android:paddingLeft="30" app:autoSizeMaxTextSize="30"
+            android:textSize="17sp"/>
     <androidx.cardview.widget.CardView
             android:layout_width="292dp"
             android:layout_height="224dp"
@@ -31,19 +32,21 @@
                 android:text="Start"
                 android:layout_width="116dp"
                 android:layout_height="41dp" android:id="@+id/button"
-                android:includeFontPadding="false" android:layout_marginLeft="85" android:layout_marginTop="150"/>
+                android:includeFontPadding="false" android:layout_marginLeft="85" android:layout_marginTop="150"
+                android:shadowColor="#C697A7"/>
         <TextView
                 android:text="Welcome"
                 android:layout_width="match_parent"
                 android:layout_height="224dp" android:id="@+id/textView1"
-                android:paddingLeft="110"/>
+                android:paddingLeft="110" android:background="#F4F4F4" android:textSize="20sp"
+                android:textStyle="bold"/>
         <TextView
                 android:text="Please enter your name"
                 android:layout_width="238dp"
                 android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_margin="30"
                 android:layout_marginStart="0" android:layout_marginLeft="0" android:layout_marginTop="0"
                 android:layout_marginEnd="0" android:layout_marginRight="0" android:layout_marginBottom="0"
-                android:paddingLeft="40"/>
+                android:paddingLeft="40" android:textColor="#0C0C0C"/>
         <EditText
                 android:id="@+id/plain_text_input"
                 android:layout_height="wrap_content"

@@ -22,15 +22,12 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         // initialize UI components
-        TextView resultLabeled = (TextView) findViewById(R.id.resultLabeled);
-        TextView totalScoreLabeled = (TextView) findViewById(R.id.totalScoreLabeled);
-
-
-
-
-
+        resultLabeled = (TextView) findViewById(R.id.resultLabeled);
+        totalScoreLabeled = (TextView) findViewById(R.id.totalScoreLabeled);
 
         // set username and score
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
         int score = getIntent().getIntExtra("AMOUNT ANSWERED RIGHT", 0);
         resultLabeled.setText(score + " / 5");

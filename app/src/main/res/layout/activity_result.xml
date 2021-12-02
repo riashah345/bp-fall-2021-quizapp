@@ -47,7 +47,7 @@
                 android:text="Return"
                 android:textSize="20sp"
                 android:layout_marginTop="150dp"
-                android:onClick="return" android:shadowColor="#F4ECEC"/>
+                android:onClick="restart" android:shadowColor="#F4ECEC"/>
 
 
     </LinearLayout>

@@ -59,7 +59,7 @@ public class QuizQuestionActivity extends AppCompatActivity {
         questionTotal = questions.size();
 
         // set progress bar
-        progress.setProgress(Integer.parseInt("Question: "+questionCounter+"/"+questionTotal));
+        progress.setProgress(questionCounter);
 
         // use helper method to proceed to next question
         showNextQuestion();
@@ -91,7 +91,7 @@ public class QuizQuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (answeredQuestion == false) {
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()) {
                         checkAnswer();
                     }
                     else {
@@ -132,7 +132,7 @@ public class QuizQuestionActivity extends AppCompatActivity {
             questionCounter++;
             nextButton.setText("Submit");
         // set progress bar
-            progress.setProgress(Integer.parseInt("Question: "+questionCounter+"/"+questionTotal));
+            progress.setProgress(questionCounter);
             answeredQuestion = false;
 
         // if finished with quiz, start Results activity
@@ -157,10 +157,10 @@ public class QuizQuestionActivity extends AppCompatActivity {
             total++;
         }
 
-        rb1.setTextColor(Color.RED);
-        rb2.setTextColor(Color.RED);
-        rb3.setTextColor(Color.RED);
-        rb4.setTextColor(Color.RED);
+        rb1.setTextColor(Color.BLACK);
+        rb2.setTextColor(Color.BLACK);
+        rb3.setTextColor(Color.BLACK);
+        rb4.setTextColor(Color.BLACK);
         switch (currQuestion.getCorrectAnsNum()) {
             case 1:
                 rb1.setTextColor(Color.GREEN);
@@ -170,6 +170,9 @@ public class QuizQuestionActivity extends AppCompatActivity {
                 break;
             case 3:
                 rb3.setTextColor(Color.GREEN);
+                break;
+            case 4:
+                rb4.setTextColor(Color.GREEN);
                 break;
         }
         if (questionCounter < questionTotal) {

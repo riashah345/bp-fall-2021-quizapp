@@ -28,13 +28,13 @@
                 android:layout_width="116dp"
                 android:layout_height="41dp" android:id="@+id/startButton"
                 android:includeFontPadding="false" android:layout_marginLeft="85dp" android:layout_marginTop="150dp"
-                android:shadowColor="#C697A7"/>
+                android:shadowColor="#C697A7" android:onClick="startQuiz"/>
         <TextView
                 android:text="Welcome"
                 android:layout_width="match_parent"
                 android:layout_height="224dp" android:id="@+id/welcomeTextView"
                 android:paddingLeft="103dp" android:background="#F4F4F4" android:textSize="20sp"
-                android:textStyle="bold" android:onClick="startQuiz"/>
+                android:textStyle="bold"/>
         <TextView
                 android:text="Please enter your name"
                 android:layout_width="238dp"

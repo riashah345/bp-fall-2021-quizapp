@@ -37,18 +37,19 @@ public class QuizQuestionActivity extends AppCompatActivity {
         // create arraylist of questions
         questions = new ArrayList<>();
         // get username intent from main activity screen
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("username");
+
 
         // initialize views using findViewByID
-        questionTextView.findViewById(R.id.questionTextView);
-        radioGroup.findViewById(R.id.radioGroup);
-        progress.findViewById(R.id.progress);
-        rb1.findViewById(R.id.rb1);
-        rb2.findViewById(R.id.rb2);
-        rb3.findViewById(R.id.rb3);
-        rb4.findViewById(R.id.rb4);
-        nextButton.findViewById(R.id.nextButton);
+        questionTextView = findViewById(R.id.questionTextView);
+        radioGroup = findViewById(R.id.radioGroup);
+        progress = findViewById(R.id.progress);
+        rb1 = findViewById(R.id.rb1);
+        rb2 = findViewById(R.id.rb2);
+        rb3 = findViewById(R.id.rb3);
+        rb4 = findViewById(R.id.rb4);
+        nextButton = findViewById(R.id.nextButton);
         color = rb1.getTextColors();
 
         // use helper method to add question content to arraylist

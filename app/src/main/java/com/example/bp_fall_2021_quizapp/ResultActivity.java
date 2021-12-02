@@ -22,8 +22,8 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         // initialize UI components
-        resultLabeled = (TextView) findViewById(R.id.resultLabeled);
-        totalScoreLabeled = (TextView) findViewById(R.id.totalScoreLabeled);
+        resultLabeled = findViewById(R.id.resultLabeled);
+        totalScoreLabeled = findViewById(R.id.totalScoreLabeled);
 
         // set username and score
         Intent intent = new Intent(this, MainActivity.class);

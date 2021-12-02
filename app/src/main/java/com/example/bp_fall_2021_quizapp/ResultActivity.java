@@ -1,6 +1,8 @@
 package com.example.bp_fall_2021_quizapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,6 +14,8 @@ public class ResultActivity extends AppCompatActivity {
 
     // UI component variables
 
+    private TextView resultLabeled, totalScoreLabeled;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +23,7 @@ public class ResultActivity extends AppCompatActivity {
 
         // initialize UI components
         TextView resultLabeled = (TextView) findViewById(R.id.resultLabeled);
-        TextView totalScore = (TextView) findViewById(R.id.totalScore);
+        TextView totalScoreLabeled = (TextView) findViewById(R.id.totalScoreLabeled);
 
 
 
@@ -29,7 +33,20 @@ public class ResultActivity extends AppCompatActivity {
         // set username and score
 
         int score = getIntent().getIntExtra("AMOUNT ANSWERED RIGHT", 0);
-        resultLabeled.setText(score + "");
+        resultLabeled.setText(score + " / 5");
+
+        SharedPreferences settingOfApp = getSharedPreferences("quizApp", Context.MODE_PRIVATE);
+        int totalScore = settingOfApp.getInt("totalScore", 0);
+
+        totalScore += score;
+
+        resultLabeled.setText(score + " / 5");
+        totalScoreLabeled.setText("Total Score : " + totalScore);
+
+        //updates total score
+        SharedPreferences.Editor edit = settingOfApp.edit();
+        edit.putInt("totalScore", totalScore);
+        edit.commit();
     }
 
     /**
